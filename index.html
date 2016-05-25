@@ -31,13 +31,13 @@
           <h1>
 <a id="addel" class="anchor" href="#addel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>addel</h1>
 
+<p><img src="demo.gif" alt="addel Example"></p>
+
 <p>addel is a simple &amp; lightweight jQuery plugin for powering UIs that enable dynamic addition &amp; deletion of HTML elements, conceived with form elements in mind.</p>
 
 <p>"addel" is short for add-delete &amp; should be pronounced Adele, just like the singer's name.</p>
 
 <p>..Because it's all in the details, people!</p>
-
-<p><img src="https://raw.githubusercontent.com/legshooter/addel/master/demo.gif" alt="addel Example"></p>
 
 <h2>
 <a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
@@ -65,7 +65,7 @@
 </ul>
 
 <p>And include it:
-<code>&lt;script src="/path/to/file/addel.jquery.js"&gt;&lt;/script&gt;</code></p>
+<code>&lt;script src="/path/to/file/addel.jquery.min.js"&gt;&lt;/script&gt;</code></p>
 
 <h2>
 <a id="initialization" class="anchor" href="#initialization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Initialization</h2>
@@ -150,18 +150,45 @@
 <h2>
 <a id="custom-events" class="anchor" href="#custom-events" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Custom events</h2>
 
-<ul>
-<li>
-<code>addel:add</code>: Triggered when <code>classes.add</code> is clicked</li>
-<li>
-<code>addel:added</code>: Triggered when <code>classes.target</code> is added to the DOM</li>
-<li>
-<code>addel:delete</code>: Triggered when <code>classes.delete</code> is clicked</li>
-<li>
-<code>addel:deleted</code>: Triggered when <code>classes.target</code> is deleted from the DOM</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Triggered when...</th>
+<th>Exposes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addel:add</code></td>
+<td>
+<code>classes.add</code> is clicked</td>
+<td><code>event.target</code></td>
+</tr>
+<tr>
+<td><code>addel:added</code></td>
+<td>
+<code>classes.target</code> is added to the DOM</td>
+<td>
+<code>event.target</code>, <code>event.added</code>
+</td>
+</tr>
+<tr>
+<td><code>addel:delete</code></td>
+<td>
+<code>classes.delete</code> is clicked</td>
+<td><code>event.target</code></td>
+</tr>
+<tr>
+<td><code>addel:deleted</code></td>
+<td>
+<code>classes.target</code> is removed from the DOM</td>
+<td><code>event.target</code></td>
+</tr>
+</tbody>
+</table>
 
-<p>All custom events are triggered on the element initialized as the container.</p>
+<p>All custom events are triggered on the element addel is initialized upon (AKA <code>.addel-container</code>).</p>
 
 <h3>
 <a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h3>
@@ -177,20 +204,22 @@
   }
 });</pre></div>
 
+<p>A more elaborate <a href="example.html">example</a> is included.</p>
+
 <h2>
 <a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h2>
 
-<p>jQuery (v2.2.3).</p>
+<p>jQuery (v2.2.4).</p>
 
 <h2>
 <a id="browser-support" class="anchor" href="#browser-support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Browser support</h2>
 
-<p>Developed and tested using Chrome (v50). Should work properly on all modern browsers.</p>
+<p>addel is developed and tested using Chrome (v50). Should work properly on all evergreen browsers and IE9+.</p>
 
 <h2>
 <a id="release-policy" class="anchor" href="#release-policy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release policy</h2>
 
-<p>See <a href="http://semver.org/">Semantic Versioning</a>.</p>
+<p>addel adheres to <a href="http://semver.org/">Semantic Versioning</a>.</p>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
